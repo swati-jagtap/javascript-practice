@@ -1,0 +1,215 @@
+        body{
+            font-family: Arial, Helvetica, sans-serif;;
+        }
+        .contactform a{
+            text-decoration: none;
+            color:white;
+        }
+        .contactBanner{
+            background-image:url("https://images.unsplash.com/photo-1599995903128-531fc7fb694b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3RydWN0aW9uJTIwc2l0ZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+
+        }
+        .homeintro{
+            background-image:  linear-gradient(
+                rgba(69, 76, 83, 0.4), 
+                rgba(244, 245, 250, 0.7)
+              ),url("https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fGJ1aWxkaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+        
+        }
+
+        button{
+            font-size: 18px;
+            padding:10px 40px;
+            margin-top: 38px;
+            background-color: rgb(20, 110, 194) ;
+            color: #fcf7f7;
+            border-radius: 20px;
+            border:0px ;
+        }
+        .homeintro .subheading,.counter{
+            font-size: 50px;
+            font-weight: 700;
+            color: rgb(20, 110, 194);
+            text-transform: uppercase;
+        }
+        .animation h4{
+            font-size: 18px;
+            font-weight: 600;
+            color: rgb(20, 110, 194);
+            text-transform: capitalize;
+        }
+        
+        .homeintro h1,.ourprojects h1,.milestones h1,.counter{
+            color: rgb(20, 110, 194);
+            text-transform: uppercase;
+        }
+        .contactBanner,.homeintro{
+            padding-top:60px;
+            padding-bottom:60px;
+            text-align:center;            
+            background-repeat:no-repeat ;
+            background-size:100% 100%;            
+            color:#fcf7f7;
+        }
+        .homeintro h1,.contactBanner h1{
+            font-size: 60px;
+            font-weight: 700;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            font-weight: bolder;
+            text-transform: capitalize;
+        }
+        .contactBanner h2,.homeintro h2{
+            text-transform: capitalize;
+            font-style: italic;           
+        }
+        .ourprojects .row {
+            display: table;
+            width:80%;
+            margin: 0 10%;
+            margin-top:40px;
+            
+        }
+        .ourprojects .row .column{
+            display: table-cell;
+            width:30%;  
+            padding: 10px;
+            
+                        
+            
+        }
+        .ourprojects .content{
+            display: table-cell;
+            border: 2px solid grey;
+            box-shadow: 2px 2px 2px 2px grey;
+            text-align: center;
+            width:100%;
+            padding-bottom: 10px;
+            
+        }
+        .ourprojects .content img{
+            width:100%;
+            height:290px;
+        }
+        .ourprojects .content .title{
+            font-size: 22px;
+            line-height: 60px;
+        }
+        
+        .manimation{
+            margin-top: -33px;          
+            
+            padding:30px 6%;
+            
+            text-align: center;
+           
+        }
+       .animation{
+          width:20%;
+          float:left;
+          padding:2%;
+       }
+        /*.contactform .row .column{
+            background-color:lightgrey;
+        }*/
+        .contactform .column{
+              width:50%;
+              float:left;
+              padding-top:60px;
+            padding-bottom:60px;
+            
+            
+        }
+
+        .contactform h1,.ourprojects h1,.milestones h1{
+            text-align: center;
+        }
+
+        .contactform .column .card{
+            background: darkblue;
+            color: white;
+           font-family: Arial, Helvetica, sans-serif;
+           box-shadow: 5px 5px 5px 5px #6370bb;;
+           width: 40%;
+           margin:auto;
+           padding:2%;
+          
+           margin-bottom: 40px;
+           border-radius: 10px;
+        }
+
+        .contactform .column .card p{
+            font-size:18px;            
+        }
+
+        .contactform .column .card p{
+            display:flex;
+            flex-direction: row;
+           padding-left: 0px;
+            justify-content:space-evenly;
+            padding:10px;
+        }
+
+        .contactform .column form{
+            margin:auto;
+          
+            
+        }
+        input,textarea{
+            width:80%;
+            padding:10px;
+            margin:8px 0 25px 0;
+            font-size:18px;
+        }
+        input[type=submit]{
+            width:84%;
+        }
+        
+   /*media query for responsive design*/
+        @media only screen and (max-width: 768px){
+            .contactform .column{
+                width:100%;
+                padding-top:30px;
+                padding-bottom: 20px;
+            }
+            .contactform .column .card{
+                width:80%;
+            }
+            .contactBanner{
+            padding-top:30px;
+            padding-bottom:30px;
+        }
+
+        .homeintro .subheading,.counter{
+            font-size: 30px;
+            font-weight: 700;
+            color: rgb(20, 110, 194);
+            text-transform: uppercase;
+        }
+        .homeintro h1{
+            font-size: 40px;
+        }
+        .ourprojects .row .column{
+            margin:10px;
+            width:100%;
+        }
+
+        h1{
+
+            font-size: 24px;
+        }
+
+        h2{
+            font-size: 18px;
+        }
+
+        input,textarea{
+            width:90%;
+        }
+        input[type=submit]{
+            width:98%;
+        }
+
+    }
