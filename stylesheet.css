@@ -16,6 +16,11 @@
               ),url("https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fGJ1aWxkaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
         
         }
+        .project1intro{
+            background-image: url("https://image.freepik.com/free-vector/shop-front-store-front-view-illustration-template-design-fashion-store-facade_1284-51605.jpg");
+        
+
+        }
 
         button{
             font-size: 18px;
@@ -46,6 +51,48 @@
             background-size:100% 100%;            
             color:#fcf7f7;
         }
+
+        .project1intro{
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            height:500px;
+        }
+        #views{
+            background-color: rgb(20, 110, 194);
+        }
+        #views h1{
+            color: #ffffff;
+            padding:40px 0px;
+        }
+        #views p{
+           text-align: justify;
+           padding:0 3%;
+           padding-bottom: 40px;
+           color: rgba(249, 253, 253, 0.781);
+        }
+        .vertical-nav{
+            position: fixed;
+            top:550px;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform:translateY(-50%);
+            background-color: rgb(176, 179, 178);
+        }
+
+        .vertical-nav a {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 20px;
+          }
+
+          #views{
+              margin-left:20%;
+              margin:auto;
+              width:80%
+          }
         .homeintro h1,.contactBanner h1{
             font-size: 60px;
             font-weight: 700;
@@ -98,6 +145,9 @@
             font-size: 22px;
             line-height: 60px;
         }
+       
+
+       
         
         /*.contactform .row .column{
             background-color:lightgrey;
@@ -111,7 +161,7 @@
             
         }
           
-        .contactform h1,.ourprojects h1{
+        .contactform h1,.ourprojects h1,#views h1{
             text-align: center;
         }
 
@@ -194,6 +244,8 @@
         .ourprojects .row .column{
         width:90%;  
         }
+
+        
 
         h1{
 
