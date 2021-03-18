@@ -66,16 +66,19 @@
             font-style: italic;           
         }
         .ourprojects .row {
-            display: table;
-            width:80%;
-            margin: 0 10%;
-            margin-top:40px;
             
+            width:93%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top:40px;
+            align-items: center;
+            padding-left: 7%;
+            padding-right:0%;
         }
         .ourprojects .row .column{
-            display: table-cell;
+            float: left;
             width:30%;  
-            padding: 10px;
+            padding:10px;
             
                         
             
@@ -122,7 +125,7 @@
             
             
         }
-
+          
         .contactform h1,.ourprojects h1,.milestones h1{
             text-align: center;
         }
@@ -188,13 +191,36 @@
             color: rgb(20, 110, 194);
             text-transform: uppercase;
         }
+        
         .homeintro h1{
             font-size: 40px;
         }
-        .ourprojects .row .column{
-            margin:10px;
+        .ourprojects .row{
             width:100%;
+            margin: 0 2%;
+            padding-left: 0%;
+
+            
         }
+        .ourprojects h1{
+            padding-top:30px;
+            padding-bottom:30px;
+        }
+        .ourprojects .row .column{
+        width:90%;  
+        }
+
+        .mstone{
+            background-color:rgb(20, 110, 194);
+            clear:left;
+        }
+
+        .animation{
+            width:46%;
+            float:left;
+            padding:2%;
+            margin-top:10px;
+         }
 
         h1{
 
