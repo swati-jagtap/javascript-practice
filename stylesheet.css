@@ -26,20 +26,15 @@
             border-radius: 20px;
             border:0px ;
         }
-        .homeintro .subheading,.counter{
+        .homeintro .subheading{
             font-size: 50px;
             font-weight: 700;
             color: rgb(20, 110, 194);
             text-transform: uppercase;
         }
-        .animation h4{
-            font-size: 18px;
-            font-weight: 600;
-            color: rgb(20, 110, 194);
-            text-transform: capitalize;
-        }
+      
         
-        .homeintro h1,.ourprojects h1,.milestones h1,.counter{
+        .homeintro h1,.ourprojects h1{
             color: rgb(20, 110, 194);
             text-transform: uppercase;
         }
@@ -79,6 +74,7 @@
             float: left;
             width:30%;  
             padding:10px;
+            margin-bottom:20px;
             
                         
             
@@ -86,6 +82,8 @@
         .ourprojects .content{
             display: table-cell;
             border: 2px solid grey;
+
+            border-radius: 10px;
             box-shadow: 2px 2px 2px 2px grey;
             text-align: center;
             width:100%;
@@ -101,19 +99,6 @@
             line-height: 60px;
         }
         
-        .manimation{
-            margin-top: -33px;          
-            
-            padding:30px 6%;
-            
-            text-align: center;
-           
-        }
-       .animation{
-          width:20%;
-          float:left;
-          padding:2%;
-       }
         /*.contactform .row .column{
             background-color:lightgrey;
         }*/
@@ -126,7 +111,7 @@
             
         }
           
-        .contactform h1,.ourprojects h1,.milestones h1{
+        .contactform h1,.ourprojects h1{
             text-align: center;
         }
 
@@ -185,7 +170,7 @@
             padding-bottom:30px;
         }
 
-        .homeintro .subheading,.counter{
+        .homeintro .subheading{
             font-size: 30px;
             font-weight: 700;
             color: rgb(20, 110, 194);
@@ -209,18 +194,6 @@
         .ourprojects .row .column{
         width:90%;  
         }
-
-        .mstone{
-            background-color:rgb(20, 110, 194);
-            clear:left;
-        }
-
-        .animation{
-            width:46%;
-            float:left;
-            padding:2%;
-            margin-top:10px;
-         }
 
         h1{
 
