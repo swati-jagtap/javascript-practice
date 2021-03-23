@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            text-align: center;
+            margin-top: 40px;
+        }
+        section .container{
+            margin-top: 70px;
+        }
+
+        .container{
+            max-width: 100%;
+
+        }
+        .counter{
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        .container{            
+            color: blue;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container{flex-wrap: wrap;
+                flex:50%;
+            }
+
+            .container h2{
+            font-size: 20px;  
+            margin-bottom: 40px;          
+            }
+           .container >div:nth-of-type(1),.container >div:nth-of-type(2){
+               border-bottom: 2px solid blue;
+               margin-bottom: 40px;
+           }
+           section .container{
+            margin-top: 50px;
+        }
+
+
+
+        }
+    </style>
+
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Milestones</h1>
+        </div>
+    </header>
+
+    <section class="counters">
+        <div class="container">
+
+            <div>
+                <div class="counter" data-target="10">0 </div>
+                <h2>Years of experience</h2>
+            </div>
+
+            <div>
+                <div class="counter" data-target="50">0 </div>
+                <h2>Ongoing Projects</h2>
+            </div>
+
+            <div>
+                <div class="counter" data-target="100">0 </div>
+                <h2>Happy Customers</h2>
+            </div>
+
+            <div>
+                <div class="counter" data-target="90">0 </div>
+                <h2>Years of experience</h2>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const counters=document.querySelectorAll('.counter');
+        const speed=10;
+        counters.forEach(counter=>{
+            const updateCount= () =>{
+                const target =  +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                const inc = Math.floor(target/speed);
+
+                if(count<target){
+                    counter.innerText=(count + inc);
+                    setTimeout(updateCount,100);
+                }else{
+                    count.innerText = target;
+                }
+            }
+
+            updateCount();
+        })
+
+
+    </script>
+
+</body>
+</html>
