@@ -410,20 +410,26 @@
             justify-content:space-evenly;
             padding:10px;
         }
+        .contactdetail{
+            width:100%;
+        }
 
         .contactform .column form{
-            margin:auto;
-          
+            margin:auto; 
+            width:90%;
+            padding-left: 5%;
+             
+
             
         }
         input,textarea{
-            width:80%;
+            width:90%;
             padding:10px;
             margin:8px 0 25px 0;
             font-size:18px;
         }
         input[type=submit]{
-            width:84%;
+            width:90%;
         }
 
 
@@ -492,14 +498,21 @@
 
             footer .column{
                 padding:0 20px;
-                width:50%;
+                width:auto;
             }
             footer .arudra{
                 width:100%;
             }
+            footer .column quicklink{
+                width:50%;
+            }
+            footer .column services{
+                width:50%;
+            }
             footer .column detail{
                 width:100%;
             }
+           
 
 
            .copyright .column,.col1{
@@ -523,8 +536,11 @@
                 padding-top:30px;
                 padding-bottom: 20px;
             }
+            .contactform .row .column>h1{
+                padding-bottom:20px;
+            }
             .contactform .column .card{
-                width:80%;
+                width:90%;
             }
             .contactBanner{
             padding-top:30px;
@@ -599,21 +615,28 @@
             width:90%;
         }
         input[type=submit]{
-            width:98%;
+            width:90%;
         }
 
 
-
+         header .container{
+             margin-bottom: -80px;
+         }
         .container{flex-wrap: wrap;
             flex:50%;
         }
 
+        /*changing counter txt size*/
+        .counter{
+            font-size:24px;
+        }
+
         .container h2{
-        font-size: 20px;  
+        font-size: 18px;  
         margin-bottom: 40px;          
         }
-       .container >div:nth-of-type(1),.container >div:nth-of-type(2){
-           border-bottom: 2px solid blue;
+       .container >div:nth-of-type(1),.container >div:nth-of-type(2),.container >div:nth-of-type(3){
+           border-bottom: 2px solid rgb(147, 147, 241);
            margin-bottom: 40px;
        }
        section .container{
