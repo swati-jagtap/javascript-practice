@@ -181,6 +181,7 @@
         }
         #amenities{
             background-color: rgb(20, 110, 194);
+            
         }
         #amenities h1{
             color: #ffffff;
@@ -192,13 +193,13 @@
         .prow{
             background-color: rgb(20, 110, 194);
             margin-top:-50px;
-            width: 100%;  
+            width: 101%;  
                     
             
         }
 
        .prow .column{
-           width:30.52%;
+           width:33%;
            float:left;
            background-color: rgb(20, 110, 194);
            padding-bottom: 40px;
@@ -213,6 +214,7 @@
 
        #location iframe{
            padding:0 10%;
+           width: 100%;
        }
 
        #location> h1{
@@ -255,7 +257,11 @@
 
           /*.mySlides {display: none;
            }*/
-         /* .mySlides fade img {vertical-align: middle;}*/
+          .mySlides fade img {
+              vertical-align: middle;
+              
+              
+            }
           .slideshow-container {
             max-width: 80%;
             
