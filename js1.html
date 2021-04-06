@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+    </head>
+    <body>
+         <script>
+         const age = [19, 22, 19, 24, 20, 25, 26, 24, 25,24]
+         
+         if(age.length%2==0){
+            var mid=(age.length/2);
+            console.log(mid);
+            var midd=(mid-1);
+            console.log(midd)
+            var median=(age[mid]+age[midd])/2;  
+                    
+        }else{
+            mid=parseInt(age.length/2);
+            median=age[mid]/2;
+        }
+        console.log(median);
+
+
+
+        const country=["india","china","nepal","bhutan","Us"];
+        a=parseInt(country.length/2);
+        console.log(a);
+        if(country.length%2==0){
+            console.log(country[a],", ",country[a-1]);
+        }else{
+            console.log(country[a]);
+        }
+
+
+
+        //Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
+   
+       a=parseInt(country.length/2);
+        console.log(a);
+        if(country.length%2==0){
+            var h1=console.log(country.slice(0,a));
+            var h2=console.log(country.slice(a,country.length));
+        }
+        else{
+           var h1= console.log(country.slice(0,a+1));
+           var h2=console.log(country.slice(a+1,country.length));
+        }
+        
+         for(let i=0;i<7;i++){
+            for(let j=0;j<=i;j++){
+                 console.log("#");
+            }
+            console.log('\n');
+        }
+
+     //6.1.9-Use for loop to iterate from 0 to 100 and print only prime numbers
+     var count=0;  
+     for(let i=2;i<=100;i++)
+     {
+            var a=i/2;
+            for(let j=1;j<=a;j++)
+            {
+                if(i%j==0){
+                    count++;
+                }
+                if(count>=2){
+                   
+                    break;
+                }
+            }
+            if(count<=1){
+                document.write(i,'\n');
+            }
+       count=0;
+
+     }
+     document.write("<br>")
+
+     //6.1.10-use for loop to iterate from 0 to 100 & print sum of all numbers
+
+     var sum=0;
+     for(let i=0;i<=100;i++)
+     {
+         sum=sum+i;
+     }
+     document.writeln(`The sum of all numbers from 0 to 100 is ${sum}`);
+     document.write("<br>")
+
+     //6.1.11-Use for loop to iterate from 0 to 100 & print sum of all evens and sum of all odds
+     var sume=0;
+     var sumo=0;
+     for(let i=0;i<=100;i++){
+         if(i%2==0)
+         {
+             sume=sume+i;
+         }else{
+              sumo=sumo+i;
+         }
+     } 
+     document.writeln(`The sum of all evens from 0 to 100 is ${sume}.\n`)
+     document.writeln(`The sum of all odds from 0 to 100 is ${sumo}.\n`)
+     document.write("<br>")
+
+     //6.1.12-Use for loop to iterate from 0 to 100 & print sum of all evens and sum of all odds as array
+     const A=[];
+     var sume=0;
+     var sumo=0;
+     for(let i=0;i<=100;i++){
+         if(i%2==0)
+         {
+             sume=sume+i;
+         }else{
+              sumo=sumo+i;
+         }
+     } 
+     A.push(sume,sumo);
+     document.write(A);
+     console.log(A);
+     document.write("<br>")
+
+     //6.1.13-Develop a small script which generate array of 5 random no.
+     const R=[];
+     for(let i=0;i<5;i++)
+     {
+         R.push(Math.floor(Math.random()*100));
+     }
+     document.write(R);
+     document.write("<br>")
+
+    //6.1.14-Develop a small script which generate array of 5 random no. and the no must b unique
+     const arr=[];
+     while(arr.length<5)
+     {
+         var r=Math.floor(Math.random()*100);
+         if(arr.indexOf(r)===-1)
+         {
+             arr.push(r);
+         }
+     }
+     document.write(arr);
+     document.write("<br>")
+
+
+
+    //6.1.15-Develop a small script which generate 6 characters random id
+     var id='';
+     var characters="ABCDEFGHIJLMNOPQRSTUVWXYabcdefghijlmnopqrstuvwxyz0123456789";
+     var charactersLength=characters.length;
+     for(let i=0;i<5;i++)
+     {
+         id=id+characters.charAt(Math.floor(Math.random()*charactersLength));
+     }
+     document.write(id);
+
+    document.write("<br>")
+
+    //6.2.1-Develop a small script which generate any number of characters random id
+    var id='';
+     var characters="ABCDEFGHIJLMNOPQRSTUVWXYabcdefghijlmnopqrstuvwxyz0123456789";
+     var charactersLength=characters.length;
+     for(let i=0;i<Math.floor(Math.random()*100);i++)
+     {
+         id=id+characters.charAt(Math.floor(Math.random()*charactersLength));
+     }
+     document.write(id);
+
+    document.write("<br>")
+
+
+    //6.2.2-Develop a script which generate a random hexadecimal number
+     var codeLetters="0123456789ABCDEF";
+     var hexCode="#";
+     for(let i=0;i<6;i++)
+     {
+         hexCode=hexCode+codeLetters.charAt(Math.floor(Math.random()*16));
+
+         // or u can use--hexCode+codeLetters[Math.floor(Math.random()*16)]
+
+         //Math.random()--generate random no. bet 0 to 1
+         //Math.random()*16--generate random no. bet 0 to 16
+         //We use 16 because hexcode contains 16 letters(0-9),(A-F)
+         //codeLetters.charAt(Math.floor(Math.random()*16))--returns character at index generated
+         
+     }
+     document.write(hexCode);
+     document.write("<br>")
+
+    //6.2.3 Write a script which generates a random rgb color number.
+    var r=Math.floor(Math.random()*255);
+    var g=Math.floor(Math.random()*255);
+    var b=Math.floor(Math.random()*255);
+    document.write(`rgb(${r},${g},${b})`);
+
+    document.write("<br>")
+
+    //6.2.5-Using the above countries array, create an array for countries length'
+
+    var Country=["ALBANIA","BOLIVIA","CANADA","DENMARC","ETHIOPIA","FINLAND","GERMANY","HUNGARY","IRELAND","JAPAN","CENYA"];
+    let cLength=[];
+    for(let i=0;i<Country.length;i++)
+    {
+        cLength.push(Country[i].length);
+    }
+    document.write(cLength);
+    document.write("<br>")
+
+
+    //6.2.6--Use the countries array to create the following array of arrays:
+    /* let newCountryArray= new Array();
+     let arrayOfArray=[];
+
+     for(let i=0;i<Country.length;i++)
+     {
+        newCountryArray.push(Country[i],Country[i].slice(0,3),Country[i].length);
+               
+     }
+     
+     document.write("<br>");*/
+
+
+    // 6.2.7-In above countries array
+     var Country=["ALBANIA","BOLIVIA","CANADA","DENMARC","ETHIOPIA","FINLAND","GERMANY","HUNGARY","IRELAND","JAPAN","CENYA"];
+     var land=[];
+     var cland=0;
+     for(let i=0;i<Country.length;i++)
+     {
+         if(Country[i].includes('land'));
+         {
+             document.write(Country[i],"\n")
+              land.push(Country[i]);
+              cland=1;
+         }
+     }
+     if(cland==1)
+     {
+         document.write(land);
+     }
+     else{
+         document.write("All these countries are without land");
+     }
+
+
+     
+     
+    
+
+         </script>
+
+    </body>
+</html>

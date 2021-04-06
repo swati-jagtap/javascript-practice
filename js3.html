@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+     //7.2.15--Writ a function which generates a randomUserIp
+/*function randomUserIp()
+     {
+        console.log(Math.floor((Math.random()*255)+1),".",Math.floor(Math.random()*255),".",Math.floor(Math.random()*255),".",Math.floor(Math.random()*255));
+     }
+      randomUserIp();
+      randomUserIp();
+      randomUserIp();*/
+
+      //7.2.16--Write a function which generates a randomMacAddress
+      /*function randomMacAddress()
+      {
+          addressDigits="0123456789ABCDEF";
+          macAddress="";
+          for(let i=0;i<6;i++)
+          {
+               macAddress+=addressDigits.charAt(Math.floor(Math.random()*15));
+               macAddress+=addressDigits.charAt(Math.floor(Math.random()*15));
+               if(i!=5)macAddress+=":"
+          }
+          return macAddress;
+      }
+      console.log(randomMacAddress());*/
+
+
+
+      //7.2.17--Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+     /* function randomHexaNumberGenerator()
+      {
+          let hexdigits="0123456789ABCDEF";
+          let hexCode="#";
+          for(let i=0;i<6;i++)
+          {
+              hexCode+=hexdigits.charAt(Math.floor(Math.random()*16));
+          }
+          return hexCode;
+      }
+      console.log(randomHexaNumberGenerator());
+      console.log(randomHexaNumberGenerator());
+      console.log(randomHexaNumberGenerator());*/
+
+
+      //7.2.18--Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+     /* function userIdGenerator()
+      {
+            idchar="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJkLMNOPQRSTUVWXYZ";
+            id="";
+            for(let i=0;i<7;i++)
+            {
+                id+=idchar.charAt(Math.floor(Math.random()*63));
+                
+            }
+            return id;
+      }
+      console.log(userIdGenerator());
+      console.log(userIdGenerator());
+      console.log(userIdGenerator());*/
+
+      //7.3.1 --    Modify question number n . Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+     /* function userIdGeneratedByUser()
+      {
+          let idChar="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJkLMNOPQRSTUVWXYZ";
+          
+          nChar=window.prompt("Enter no. of characters u want in id");
+          nCode=window.prompt("How many Id u want?");
+          console.log("no. of char=",nChar,"& no.of id=",nCode);
+          for(let i=0;i<nCode;i++)
+          {
+            let id="";
+              for(let j=0;j<nChar;j++)
+              {
+                  id+=idChar.charAt(Math.floor(Math.random()*63));
+              }
+              console.log(id,"\n");
+          }
+      }
+      userIdGeneratedByUser();*/
+
+      //7.3.2--Write a function name rgbColorGenerator and it generates rgb colors.
+      /*function rgbColorGenerator()
+      {
+          console.log(`rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`);
+      }
+      rgbColorGenerator();
+      rgbColorGenerator();
+      rgbColorGenerator();
+      rgbColorGenerator();
+      rgbColorGenerator();*/
+
+      //7.3.3--Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array
+      /* function arrayOfHexaColors(arr)
+       {
+           let n=Math.floor(Math.random()*arr.length);
+           let color=[];
+           for(i=0;i<=n;i++)
+           {
+               color.push(arr[i]);
+           }
+           return color.toString();
+       }
+       let hexColor=["#dj4fd","#9nn4hd","#87bhg4","#a5b3cg","#gf2sda"];
+       console.log(arrayOfHexaColors(hexColor));
+       console.log(arrayOfHexaColors(hexColor));
+       console.log(arrayOfHexaColors(hexColor));
+       console.log(arrayOfHexaColors(hexColor));*/
+
+       //7.3.4--Write a function arrayOfRgbColors which return any number of RGB colors in an array.
+     /*  function arrayOfrgbColors(arr)
+       {
+           let n=Math.floor(Math.random()*arr.length);
+           let color=[];
+           for(i=0;i<=n;i++)
+           {
+               color.push(arr[i]);
+           }
+           return color.toString();
+       }
+       let rgbColor=["rgb(12,78,244)","rgb(255,255,255)","rgb(0,0,245)","rgb(67,98,222)","rgb(122,87,90)"];
+       console.log(arrayOfrgbColors(rgbColor));
+       console.log(arrayOfrgbColors(rgbColor));
+       console.log(arrayOfrgbColors(rgbColor));
+       console.log(arrayOfrgbColors(rgbColor));*/
+
+
+       //7.3.5--Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
+       function convertHexaToRgb(hexaC)
+       {
+           let hexaColor=hexaC.toUpperCase();
+           let hex=[0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
+           let rgb=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+           let color="";
+            for(var i=1;i<=6;i+2)
+            {
+                for(var j=i;j<=i+1;j++)
+                {
+                    var a=hex.indexOf(hexaColor[j]);
+                    var b=rgb[a];
+                    if(j%2==0)
+                    {
+                        var fv=b*16;
+                    }
+                    else{
+                    var code=fv+b;
+                    } 
+                }
+                 color+=code;
+                 if(i!=6)color+=",";
+                
+            }
+            return color;
+       } 
+       console.log(`rgb(,,,)`,convertHexaToRgb("#12cd4f"));
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

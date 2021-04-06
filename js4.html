@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //7.3.5--Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
+       function convertHexaToRgb(hexaC)
+       {
+           let hexaColor=hexaC.toUpperCase();
+           let hex=[0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
+           let rgb=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+           let color="";
+            for(var i=1;i<=6;i+2)
+            {
+                for(var j=i;j<=i+1;j++)
+                {
+                    var a=hex.indexOf(hexaColor[j]);
+                    var b=rgb[a];
+                    if(j%2==0)
+                    {
+                        var fv=b*16;
+                    }
+                    else{
+                    var code=fv+b;
+                    } 
+                }
+                 color+=code;
+                 if(i!=6)color+=",";
+                
+            }
+            return color;
+       } 
+       console.log(`rgb(,,,)`,convertHexaToRgb("#12cd4f"));
+
+
+    </script>
+</body>
+</html>
