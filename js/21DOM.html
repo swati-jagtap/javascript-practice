@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class='title' id='first-title'>First Title</h1>
+     <h1 class='title' id='second-title'>Second Title</h1>
+     <h1 class='title' id='third-title'>Third Title</h1>
+     <h1></h1>
+
+
+
+
+     <script>
+         //Getting html elements
+         //by tagname
+         const allh1=document.getElementsByTagName('h1')
+         //console.log(allh1)
+
+         // by classname
+         const alltitle=document.getElementsByClassName('title')
+        // console.log(alltitle)
+
+         //by id
+         const h1id=document.getElementById('first-title')
+         //console.log(h1id)
+
+        // Getting elements by using querySelector methods
+/*
+The document.querySelector method can select an HTML or HTML elements by tag name, by id or by class name.
+
+querySelector: can be used to select HTML element by its tag name, id or class.
+             If the tag name is used it selects only the first element.
+ */
+ const qselectTag=document.querySelector('h1')
+ console.log(qselectTag)
+ const qSelectClass=document.querySelector(".title")
+ console.log(qSelectClass)
+ const qSelectId=document.querySelector("#third-title")
+ console.log(qSelectId)
+
+
+ /*querySelectorAll: can be used to select html element by its tag name or class. It return a nodeList which is an array like object which support array methods. We can use for loop or forEach to loop through each nodeList elements.
+ */
+const qSeAll=document.querySelectorAll('h1')
+console.log(qSeAll);
+
+ /*Adding attribute
+
+An attribute is added in the opening tag of HTML which gives additional information about the element. Common HTML attributes: id, class, src, style, href,disabled, title, alt. Lets add id and class for the fourth title.
+*/
+qSeAll[3].class="title"
+qSeAll[3].id="fourth-title"
+console.log(qSeAll);
+console.log(document.querySelectorAll('h1'));
+
+const titles = document.querySelectorAll('h1')
+titles.forEach((title, i) => {
+    console.log(title,i)
+  title.style.fontSize = '24px' // all titles will have 24px font size
+  if (i % 2 == 0) {
+    title.style.color = 'blue'
+  } else {
+    title.style.color = 'red'
+  }
+})
+
+     </script>
+</body>
+</html>
