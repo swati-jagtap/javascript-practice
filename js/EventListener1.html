@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener Number Generator</title>
+    <style>
+        .textCenter{
+            text-align: center;
+        }
+        h1{
+            color:rgb(93, 151, 5);
+        }
+        body{
+            width: 80%;
+            margin:auto;
+        }
+        button{
+           background-color: rgb(93, 151, 5);
+           color: white;
+           font-weight: bolder;
+        }
+        .numGen{
+            border:2px solid rgb(93, 151, 5);
+            padding:5px;
+        }
+        input{
+            width:50%;
+        }
+        div{
+            margin-top: 40px;
+        }
+        
+    </style>
+</head>
+<body class="textCenter">
+    <h1>Number Generator</h1>
+    <h2>30DaysOfJavaScript:DOM Day 3</h2>
+    <h3>Author : Asabeneh Yetayeh</h3>
+    <input type="number" id="numbarGen" class="numGen">&nbsp;&nbsp;&nbsp;
+    <button type="submit" id="submit" class="numGen">Generate Numbers</button>
+    <div class="numGenTab">
+        
+    </div>
+
+
+    <script>
+        let count=0;
+        const button = document.querySelector('button');
+        button.addEventListener("click",function genNum(){
+            //console.log("bcjsd");
+            
+            const table = document.createElement('table');
+            table.setAttribute("style","width:100%;border-collapse:collapse")
+           // table.style.backgroundColor = 'red';
+            const input=document.querySelector('input');
+            //console.log(input.value)
+            let tableVal=0;
+            for(let i=0;i<=parseInt(input.value/9);i++){
+                const tr=document.createElement('tr');
+                   for(let j=0;j<9;j++){
+                       const td = document.createElement('td');
+                       if(tableVal<=input.value){
+                        td.textContent = tableVal;
+                        td.setAttribute("style","padding:10px;border:2px solid white");
+                        
+                        if(tableVal!=0 && tableVal!=1){
+                            var flag=0; 
+                            for(let n=2;n<=parseInt(tableVal/2);n++){
+                              if(tableVal%n==0){
+                                flag=1;
+                                break;
+                              }
+                            }
+                        }
+                    
+                         if(tableVal%2==0){
+                            td.style.backgroundColor = 'green';
+                         }
+                         else{
+                            td.style.backgroundColor = 'yellow';
+                         }
+                         if(flag==0){
+                             td.style.backgroundColor = 'red';
+                         }
+
+                       tableVal++;
+                       tr.appendChild(td);
+                       }
+                      
+                   }
+                   table.appendChild(tr);
+            }
+
+            const genDiv=document.querySelector('div');
+            if(count==0){
+                genDiv.appendChild(table);
+            }
+            if(count==1){
+                genDiv.innerHTML ="";
+                genDiv.appendChild(table);
+            }           
+            
+           //console.log(genDiv)
+           count=1;
+        })
+    </script>
+
+</body>
+
+
+</html>

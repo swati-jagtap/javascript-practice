@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation 1</title>
+</head>
+<body>
+  
+    
+    <script>
+        const heading=document.createElement('h1');
+        heading.textContent="Number Generator";
+        document.body.appendChild(heading).style.textAlign="center";
+       const div1= document.createElement('div');
+        document.body.appendChild(div1);
+        //div1.style.backgroundColor= 'blue';
+       // div1.style.height = '500px';
+        div1.style.width = '60%';
+        div1.style.margin= 'auto';
+        const table1=document.createElement('table');
+       // console.log(table1)
+        table1.class="tab1";
+        //table1.textContent="nciqhci"
+        document.querySelector('div').appendChild(table1).style='width:100%';
+        let sNum=0;
+        
+        const limit=101;
+        for(let i=0;i<=parseInt(limit/6);i++){
+            const tr=document.createElement('tr');
+            
+            for(var j=0;j<6;j++){
+                const td=document.createElement('td');
+                
+                if(sNum%2==0){
+                    td.setAttribute("style","background:green; color:white; font-weight:bolder; width:10%; height:35px;text-align:center; border:1px solid white")
+      
+                }
+                else{
+                    td.setAttribute("style","background:yellow; color:white; font-weight:bolder; width:10%; height:35px;text-align:center; border:1px solid white")
+                }
+
+                let flag=0;
+                for(let p=2;p<=parseInt(sNum/2);p++){
+                    if(sNum%p==0){
+                        flag=1;
+                        break;
+                    }
+                }
+                if(flag==0 && sNum!=0 && sNum!=1){
+                    td.setAttribute("style","background:red; color:white; font-weight:bolder; width:10%; height:35px;text-align:center; border:1px solid white")
+                }
+                
+                //console.log(j+sNum)
+                const num=document.createTextNode(sNum);
+                td.appendChild(num);
+                tr.appendChild(td);
+               // tr.appendChild(td).style=border : 2px solid white'
+                 sNum++;
+            }
+           
+            document.querySelector('table').appendChild(tr)
+            //const td=document.createElement('td');
+           // tr.appendChild(td);
+        }
+
+      
+
+
+
+        
+    /*
+        const limit=101;
+        //creating rows structure
+        for(let row=1;row<=parseInt(limit/5);row++){
+           // console.log(limit/5)
+           //console.log(row);
+            const tr=document.createElement('tr');
+            document.querySelector('table').appendChild(tr);
+            //creating column
+            for(let col=0;col<=5;col++){
+
+                console.log(row)
+                const td=document.createElement('td');
+               // document.querySelector('tr:nth-child(${row})').appendChild(td);  
+              // $('tr:nth-child(row)').append(td)   
+              document.querySelector("table tr:nth-child(n+1)").append(td)       
+
+            }
+
+        }
+       */
+    </script>
+</body>
+</html>

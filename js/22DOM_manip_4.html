@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const asabenehChallenges2020 = {
+  description: 'Asabeneh Yetayeh challenges',
+  challengeTitle: 'Asabeneh Yetayeh challenges',
+  challengeSubtitle: '30DaysOfJavaScript Challenge',
+  challengeYear: 2020,
+  keywords: [    'HTML',  'HTML5','CSS',  'CSS3', 'JS', 'JavaScript','ES6',
+    'Promise','async await','Database','React','React Hooks','Context API',
+    'React Router','Web Storage','localStorage','sessionStorage','Redux',
+    'Node','MongoDB', 'SQL','API', 'DOM','data science', 'MERN', 'Python',
+    'Flask','Statistics','Linear Algebra','Numpy','Pandas','Scipy',
+    'Scikit-learn',    'Visualization',    'D3.js'
+      ],
+  author: {
+    firstName: 'Asabeneh',
+    lastName: 'Yetayeh',
+    titles: [
+      ['🌱', 'Educator'], ['💻', 'Programmer'], ['🌐', 'Developer'],
+      ['🔥', 'Motivator'],      ['📔', 'Content Creator']
+    ],
+    qualifications: [
+      'MSc. Computer Science Ongoing',
+      'BSc. Information and Communication Eng.',
+      'MSc. Food Technology',
+      'BSc.Food Technology'
+    ],
+    socialLinks: [
+      {
+        social: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/asabeneh/',
+        fontawesomeIcon: '<i class="fab fa-linkedin">'
+      },
+      {
+        social: 'Twitter',
+        url: 'https://twitter.com/Asabeneh',
+        fontawesomeIcon: '<i class="fab fa-twitter-square"></i>'
+      },
+      {
+        social: 'Github',
+        fontawesomeIcon: '<i class="fab fa-github-square"></i>',
+        url: 'https://github.com/Asabeneh'
+      },
+      {
+        social: 'DEV.to',
+        fontawesomeIcon: '',
+        url: 'https://dev.to/asabeneh'
+      }
+    ],
+    skills: [
+      'Web Development',
+      'Data Analysis',
+      'Data Visualization',
+      'Programming',
+      'Databases',
+      'Developing API'
+    ],
+    bio:
+      'I am an educator, developer, motivator and content creator. I am a life-long learner. If you like to know more about me checkout my LinkedIn or Github profile. Thank you so much for joining in my quest of changing everyone to developer.'
+  },
+  challenges: [
+    {
+      name: '30 Days Of Python',
+      topics: [
+        'Python',
+        'Flask',
+        'Numpy',
+        'Pandas',
+        'Statistics',
+        'API',
+        'MongoDB'
+      ],
+      days: 30,
+      status: 'Done',
+      questions: 'Above 500',
+      projects: 'Two',
+      interviewQns: '',
+      githubUrl: 'https://github.com/Asabeneh/30-Days-Of-Python'
+    },
+    {
+      name: '30 Days Of JavaScript',
+      topics: ['JavaScript', 'ES6', 'Promise', 'async and await', 'DOM'],
+      days: 30,
+      status: 'Ongoing',
+      questions: 'Above 500',
+      projects: 'About 30',
+      interviewQns: '',
+      githubUrl: 'https://github.com/Asabeneh/30DaysOfJavaScript'
+    },
+    {
+      name: '30 Days Of HTML & CSS',
+      topics: ['CSS', 'Flex', 'Grid', 'CSS Animation'],
+      days: 30,
+      status: 'Coming',
+      questions: 'Above 500',
+      projects: 'Two',
+      interviewQns: '',
+      githubUrl: ''
+    },
+    {
+      name: '30 Days Of React',
+      topics: [
+        'React',
+        'React Router',
+        'Redux',
+        'Context API',
+        'React Hooks',
+        'MERN'
+      ],
+      days: 30,
+      status: 'Coming',
+      questions: '',
+      projects: '',
+      interviewQns: '',
+      githubUrl: ''
+    },
+    {
+      name: '30 Days Of ReactNative',
+      topics: ['ReactNative', 'Redux'],
+      days: 30,
+      status: 'Coming',
+      questions: '',
+      projects: 'Two',
+      interviewQns: '',
+      githubUrl: ''
+    },
+    {
+      name: '30 Days Of Fullstack',
+      topics: ['React', 'Redux', 'MongoDB', 'Node', 'MERN'],
+      days: 30,
+      status: 'Coming',
+      questions: '',
+      projects: '',
+      interviewQns: '',
+      githubUrl: ''
+    },
+    {
+      name: '30 Days Of Data Analysis',
+      topics: ['Python', 'Numpy', 'Pandas', 'Statistics', 'Visualization'],
+      days: 30,
+      status: 'Coming',
+      questions: '',
+      projects: '',
+      interviewQns: '',
+      githubUrl: ''
+    },
+    {
+      name: '30 Days Of Machine Learning',
+      topics: [
+        'Python',
+        'Numpy',
+        'Pandas',
+        'Scikit-learn',
+        'Scipy',
+        'Linear Algebra',
+        'Statistics',
+        'Visualization'
+      ],
+      days: 30,
+      status: 'Coming',
+      questions: '',
+      projects: '',
+      interviewQns: '',
+      githubUrl: ''
+    }
+  ]
+}
+
+document.body.setAttribute("style","width:80%;margin:auto;");
+
+     const div1 = document.createElement('div');
+     div1.className = 'div1';
+     div1.style.textAlign = 'center';
+    // console.log(div1);
+     const title = document.createElement('h1');
+     title.className = 'title';
+     title.textContent = asabenehChallenges2020['challengeTitle']+' '
+     const year=document.createElement('span')
+     year.className = 'year';
+     year.style.fontSize = '60px';
+     const color=["red","blue","green","orange","yellow","indigo","crimson","brown"];
+     setInterval(function(){
+         const n= Math.round(Math.random()*(color.length-1));
+         //console.log(n)
+        year.style.color = color[n];
+     },1000);
+     
+     year.textContent = asabenehChallenges2020['challengeYear'];
+     title.appendChild(year);
+    // title.textContent = asabenehChallenges2020['challengeTitle']+" ";
+ 
+     //console.log(title);
+     div1.appendChild(title);
+    
+     const a = document.createElement('a')
+    a.setAttribute("href","https://github.com/Asabeneh/30-Days-Of-JavaScript/");
+    const subtitle = document.createElement('h2');
+    subtitle.className = 'subtitle';
+    subtitle.textContent = asabenehChallenges2020['challengeSubtitle'];
+    a.appendChild(subtitle);
+
+    div1.appendChild(a)
+    
+    const dte=document.createElement('h4');
+    dte.className = 'dte';
+    dte.setAttribute("style","width:180px;padding:10px;margin:auto;") 
+    
+    const d=new Date();
+      const month=["January","February","March","April","May","June","July","August","September","October","November","December"]
+      var m=month[d.getMonth()];
+      var day=d.getDate();
+      var y=d.getFullYear();
+      var h=d.getHours();
+      var min=d.getMinutes();
+      var sec=d.getSeconds();
+      div1.appendChild(dte);
+      //upgating seconds
+      setInterval(function(){
+        if(sec>=59)sec=0
+        dte.innerHTML=` May ${day} , ${y} ${h}:${min}:${sec++}`;
+        const n=Math.round(Math.random()*(color.length-1));
+        dte.style.backgroundColor = color[n]
+      },1000);
+
+     document.body.appendChild(div1);
+
+     const div2 = document.createElement('div');
+     div2.className = 'div2';
+     //div2.style.textAlign = "center";
+     const table = document.createElement('table');
+     table.setAttribute("style","width:100%;margin:auto;margin-top:50px;border-bottom:2px solid white;border-collapse:collapse")
+     const challenges = asabenehChallenges2020['challenges'];
+     console.log(challenges)
+     challenges.forEach((ele)=>{
+         const tr = document.createElement('tr');
+         tr.className = "row";
+         //tr.setAttribute("style","border:2px solid blue;");
+        /*
+         var td=document.createElement('td');
+         td.textContent = ele["name"];
+         var td=document.createElement('td');
+         td.textContent = ele["topics"];
+         var td=document.createElement('td');
+         td.textContent = ele["status"];
+         */
+         const tableData=[ele["name"],ele["topics"],ele["status"]];
+         
+         var detail=document.createElement('details');
+        
+         var summary = document.createElement('summary');
+         var ul = document.createElement('ul');
+
+         for(let i=0;i<=2;i++){
+          
+          var td=document.createElement('td');
+          if(i!=1){
+            td.textContent=tableData[i];
+          }
+          //creating deatil element for 2nd column
+          if(i==1){
+            summary.textContent = tableData[i][0];
+           // summary.textAlign = 'left';
+            for(let j=1;j<(tableData[i].length);j++){
+                  var li = document.createElement('li');
+                  li.textContent =  tableData[i][j];
+                  
+                  ul.appendChild(li);
+            }
+            
+            detail.appendChild(summary);
+            detail.appendChild(ul);
+            td.appendChild(detail);
+          }
+         // td.style.textAlign = "center";
+         td.setAttribute("style","padding:6px 10px; width:43%; border-bottom:2px solid white;border-collapse:collapse")
+          
+          if(i>=2){
+            td.style.textAlign = "right";
+           // td.style.width = "25%";
+          }
+
+          tr.appendChild(td);
+         }
+         
+         if(td.textContent=="Done"){
+          tr.setAttribute("style","background:green;");
+         }
+         else if(td.textContent=="Ongoing"){
+          tr.setAttribute("style","background:yellow;");
+         }
+         else if(td.textContent=="Coming"){
+          tr.setAttribute("style","background:red;");
+         }
+
+   // td.setAttribute("style","width:25%;") 
+
+        // tr.appendChild(td);
+         //tr.appendChild(td);
+         //tr.appendChild(td);
+         table.appendChild(tr);
+
+        // console.log(ele["name"])
+     })
+    
+     
+     
+
+     const author = document.createElement('h1');
+     //const authotData = asabenehChallenges2020['author'];
+     //console.log(asabenehChallenges2020['author']['firstName']+" "+asabenehChallenges2020['author']['lastName'])
+     author.textContent = asabenehChallenges2020['author']['firstName']+" "+asabenehChallenges2020['author']['lastName'];
+     author.style.textAlign = 'center';
+     
+
+     const bio=document.createElement('p');
+     bio.className = 'bio';
+     bio.textContent =  asabenehChallenges2020['author']['bio'];
+     bio.style.textAlign = 'center';
+     bio.style.marginTop = '40px';
+
+
+     const div21 = document.createElement('div');
+     div21.className = 'div21';
+     div21.style.display = 'flex';
+     const div_topic = document.createElement('div');
+     div_topic.className = 'div_topic_ul'
+     const div_topic_ul= document.createElement('ul');
+     
+     
+     div_topic_ul.style.listStyleType = 'none';
+     div_topic.style.float = 'left';
+     div_topic.style.width = '33%';
+     div_topic_ul.style.marginLeft = '-40px'
+     
+     for(let i=0;i<(asabenehChallenges2020['author']['titles']).length;i++){
+         const title= document.createElement('li');
+         title.textContent= (asabenehChallenges2020['author']['titles'][i].join("  "));
+         //console.log(asabenehChallenges2020['author']['titles'][i].join("  "))
+         div_topic_ul.appendChild(title);
+     }
+     const div_topic_heading=document.createElement('h2');
+     div_topic_heading.textContent = 'Titles';
+     div_topic_heading.style.textAlign = 'left';
+
+     div_topic.appendChild(div_topic_heading);
+    div_topic.appendChild(div_topic_ul);
+     div21.appendChild(div_topic);
+
+
+
+     const div_skills = document.createElement('div');
+     const div_skills_ul= document.createElement('ul');
+     //div_topic_ul.className = 'div_topic_ul'
+     
+     div_skills_ul.style.listStyleType = 'none';
+     div_skills_ul.style.marginTop = '0px';
+     div_skills_ul.style.float = 'left';
+     div_skills.style.width = '33%';
+     div_skills_ul.style.marginLeft = '-40px'
+     
+     for(let i=0;i<(asabenehChallenges2020['author']['skills']).length;i++){
+         const title= document.createElement('li');
+         title.textContent= (asabenehChallenges2020['author']['skills'][i]);
+         //console.log(asabenehChallenges2020['author']['titles'][i].join("  "))
+         div_skills_ul.appendChild(title);
+     }
+     const div_skills_heading=document.createElement('h2');
+     div_skills_heading.textContent = 'skills';
+     div_skills_heading.style.textAlign = 'left';
+
+     div_skills.appendChild(div_skills_heading);
+   
+    div_skills.appendChild(div_skills_ul);
+     div21.appendChild(div_skills);
+
+     const div_qualification = document.createElement('div');
+     const div_qualification_ul= document.createElement('ul');
+     //div_topic_ul.className = 'div_topic_ul'
+     
+     div_qualification_ul.style.listStyleType = 'none';
+     div_qualification_ul.style.marginTop = '0px';
+     div_qualification_ul.style.float = 'left';
+     div_qualification.style.width = '33%';
+     div_qualification_ul.style.marginLeft = '-40px'
+     
+     for(let i=0;i<(asabenehChallenges2020['author']['qualifications']).length;i++){
+         const title= document.createElement('li');
+         title.textContent= (asabenehChallenges2020['author']['qualifications'][i]);
+         //console.log(asabenehChallenges2020['author']['titles'][i].join("  "))
+         div_qualification_ul.appendChild(title);
+     }
+
+     const div_qualification_heading=document.createElement('h2');
+     div_qualification_heading.textContent = 'Qualifications';
+     div_qualification_heading.style.textAlign = 'left';
+
+     div_qualification.appendChild(div_qualification_heading);
+   
+
+    div_qualification.appendChild(div_qualification_ul);
+     div21.appendChild(div_qualification);
+
+
+     
+     div2.appendChild(table);
+     div2.appendChild(author)
+     div2.appendChild(bio);
+     div2.appendChild(div21);
+
+     document.body.appendChild(div2);
+
+
+     const div_keywords = document.createElement('div');
+     //div_keywords.style.display = 'flex';
+     const keywords_txt= document.createElement('h2');
+     keywords_txt.textContent = 'keywords';
+     div_keywords.appendChild(keywords_txt);
+
+     const div_keywords_ul = document.createElement('ul');
+     div_keywords_ul.style.listStyleType = 'none';
+     for(let i=0;i<asabenehChallenges2020['keywords'].length;i++){
+       const div_keywords_ul_li= document.createElement('li');
+       div_keywords_ul_li.textContent ="* "+ asabenehChallenges2020['keywords'][i];
+       const m = Math.round(Math.random()*(color.length-1));
+       
+       div_keywords_ul_li.setAttribute("style","float:left;margin-right:18px;margin-bottom:10px;padding:5px 10px;border-radius:50px;")
+       div_keywords_ul_li.style.backgroundColor = color[m];
+       div_keywords_ul.appendChild(div_keywords_ul_li);
+     }
+     div_keywords.appendChild(div_keywords_ul)
+
+     document.body.appendChild(div_keywords);
+
+    </script>
+    
+</body>
+</html>
